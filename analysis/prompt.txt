@@ -1,0 +1,98 @@
+I have a question that needs labelling and 3 keyword summaries. Question Labels describe the overall questions (CHOOSE ONLY 1), and Context Labels describe the context provided in the prompt to help get an answer (apply all that are applicable). Generate ONLY 3 keywords that simplify and generalize the question by providing context and specifying the question topic. 
+Available options are: 
+
+none of the above:
+Description: None of the predefined categories fit the question; provides context. If used in context labels, then it must be the only label.
+
+Question Labels:
+1. API Usage:
+Description: Requests for concrete instructions on implementing functionality or using an API.
+Example: "Here's my Python code snippet for implementing a specific functionality using an API."
+
+2. Discrepancy:
+Description: Questions about problems and unexpected behavior in code, seeking solutions.
+Example: "Here's a section of my code where I'm experiencing unexpected behavior; not sure how to resolve it."
+
+3. Errors:
+Description: Seeks help in understanding and fixing errors, often accompanied by stack traces.
+Example: "I encountered an error in my code with this stack trace. Can someone help me understand and fix it?"
+
+4. Review:
+Description: Requests code reviews, better solutions, or help making decisions.
+Example: "Seeking a review of my code snippet for potential improvements or better solutions."
+
+5. Conceptual:
+Description: Questions about API limitations, behavior, and understanding programming concepts.
+Example: "Conceptual question on the limitations of a specific API and insights into its behavior."
+
+6. API Change:
+Description: Inquiries related to API changes or compatibility issues between versions.
+Example: "Facing issues due to recent API changes; seeking guidance on code adjustments."
+			
+7. Learning:
+Description: Seeks documentation or tutorials to learn a language or technology.
+Example: "Looking for recommended tutorials or documentation to learn a specific language."
+
+Context Labels:
+1. Code Snippet:
+Description: A portion of code provided by the user seeking assistance or clarification.
+Example: "Here's the relevant Python code snippet I'm working with:"
+
+2. Input/Output:
+Description: Information related to the expected or actual input/output of a code snippet or program.
+Example: "Given an input of [1, 2, 3], I expect the output to be 6"
+
+3. Error Message:
+Description: Any error messages or exceptions encountered by the user.
+Example: "I'm getting a 'NullPointerException' in my Java code"
+
+4. Request for Explanation:
+Description: Questions asking for clarification or detailed explanations of code, errors, or concepts.
+Example: "Can someone explain how recursion works in this C# function?"
+
+5. Task/Goal:
+Description: Information about what the user is trying to achieve or accomplish.
+Example: "My goal is to create a responsive web design using HTML and CSS. How can I achieve this?"
+
+Summary of Label Descriptions in Format (Question labels should never be used for Context labels and vice versa):
+Question Label: ["API Usage", “Discrepancy”, "Errors", "Review", "Conceptual", "API Change", "Learning"]
+Context Labels: ["Code Snippet", "Input/Output", "Error Message", "Request for Explanation", "Task/Goal"]
+Keywords: ["","",""]
+
+Example 1: 
+Question: "I'm working on a Python project and have encountered an issue with the following code snippet. I'm not sure why I'm getting an unexpected output. Could someone help me understand and fix it?"
+
+Question Label: ["Discrepancy"]
+Context Labels: ["Code Snippet", "Request for Explanation"]
+keywords: ["Python", "code snippet", "unexpected output"]
+
+Example 2:
+Question: "I have the input "hello" and I get the error message "file error" from the code "printf(h)". Why is this happening?"
+
+Question Label: ["Errors"]
+Context Labels: ["Input/Output", "Error Message", "Code Snippet", "Request for Explanation"]
+keywords: ["printf", "file error", "input"]
+
+Example 3:
+Question: "Firefox or Chrome?"
+
+Question Label: ["none of the above"]
+Context Labels: ["none of the above"]
+Keywords: ["Firefox", "Chrome", "browser"]
+
+Example 4:
+Question: "I'm trying to implement a specific functionality in my Python project using matplotlib, but I'm having trouble understanding the documentation. Can someone provide a step-by-step guide or code snippet for achieving this?"
+
+Question Label: ["API Usage"]
+Context Labels: ["Request for Explanation", "Code Snippet"]
+Keywords: ["Python", "matplotlib", "step-by-step guide"]
+
+Example 5:
+Question: "I want to / my goal is to convert a list of integers to floats using Python. Here is my list of integers as input."
+
+Question Label: ["API Usage"]
+Context Labels: ["Task/Goal", "Input/Output"]
+Keywords: ["convert", "integers", "floats"]
+
+
+Question: "
