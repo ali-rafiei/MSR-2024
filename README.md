@@ -7,7 +7,14 @@ This artifact is by Ali Rafiei, for the paper "From Forums to AI: A Comparative 
 * Stack Overflow Data Dump: https://archive.org/details/stackexchange
 * DevGPT: https://github.com/NAIST-SE/DevGPT
 
-* Repository DOI (Zenodo):
+## Download Additional Files
+Please download the additional files for this project from the following Google Drive link: https://drive.google.com/drive/folders/1gKOIpz0ufwyCtU1rUXi6e7DgvLHu2G42?usp=sharing
+
+### Files
+* **stackoverflow.com-Posts.7z:** This is a mandatory file needed to extract the Stack Overflow data, place file within the `analysis` folder.
+* **so.txt:** This is an optional file that is the results of running `scrapeSO.py` (see instructions below), place file within the `analysis` folder
+* **filtered_out_data.json:** This is an optional file that is the results of running `refineDevGPT.py`, place file within the `analysis` folder
+* **filtered_data.json:** This is an optional file that is the results of running `refineDevGPT.py`, place file within the `analysis` folder
 
 ## Content
 The file structure of the artifact is as follow:
@@ -75,7 +82,7 @@ Then, follow these steps to complete the reproduction process:
 
 5. Run `count_tokens.py` to determine how many tokens it will take to run `label_data.py`, this program will also tell you the minimum amount of money (USD) to load into your openai account. Add 1-3 dollars over this number just in case.
 
-6. Make sure to create your openai API key and place it into line 19 of `label_data.py` before running it. The program will automatically save any progress in terms of labeling data should the program exit during runtime, in that case, un-comment lines `175-184` and comment the line sections `157-173` and then re-run the program. Labeling the data will take 10-15 hours to complete, resulting in `combined_data.json`. (Due to the probabalistic nature of using gpt-3.5-turbo-1106 to label questions, results may vary but final results will still be similar)
+6. Make sure to create your openai API key and place it into line `19` of `label_data.py` before running it. The program will automatically save any progress in terms of labeling data should the program exit during runtime, in that case, un-comment lines `175-184` and comment the line sections `157-173` and then re-run the program. Labeling the data will take 10-15 hours to complete, resulting in `combined_data.json`. (Due to the probabalistic nature of using gpt-3.5-turbo-1106 to label questions, results may vary but final results will still be similar)
 
 7. Once `combined_data.json` is obtained, run `label_data_errorgpt.py` to find all questions that were either not given labels or were given labels that were not from the pre-defined list of labels. This program will only add “ErrorGPT”: “something went wrong” to `combined_data.json`.
 
