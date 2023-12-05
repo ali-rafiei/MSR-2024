@@ -96,3 +96,13 @@ Then, follow these steps to complete the reproduction process:
       * 153/168 x 100 = 91.0714 % accurate
 
 10. Finally, run `graphs.py` to create double bar graphs comparing question and context labels between ChatGPT and Stack Overflow questions, and word clouds based on the keyword labels for ChatGPT and Stack Overflow.
+
+## Results
+### Question and Context Label Comparisons Between ChatGPT and Stack Overflow Questions
+![Results 1](analysis/graphs/doublebar_question_labels.png)
+![Results 2](analysis/graphs/doublebar_context_labels.png)
+
+### Keyword Word Cloud from ChatGPT Questions
+![Results 3](analysis/graphs/wordcloud_chatgpt.png)
+### Keyword Word Cloud from Stack Overflow Questions
+![Results 4](analysis/graphs/wordcloud_stackoverflow.png)
