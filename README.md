@@ -69,7 +69,7 @@ Then, follow these steps to complete the reproduction process:
 
 1. Extract all of the Stack Overflow data from the 7z file using the following terminal command (this can take 4-6 hours):
 ```
-    7z e -so stackoverflow.com-Posts.7z | python3 scrape.py > so.txt
+7z e -so stackoverflow.com-Posts.7z | python3 scrape.py > so.txt
 ```
 
 
@@ -97,7 +97,7 @@ Then, follow these steps to complete the reproduction process:
 10. Finally, run `graphs.py` to create double bar graphs comparing question and context labels between ChatGPT and Stack Overflow questions, and word clouds based on the keyword labels for ChatGPT and Stack Overflow.
 
 ## Results
-### Question and Context Label Comparisons Between ChatGPT and Stack Overflow Questions
+### Label Comparisons Between ChatGPT and Stack Overflow Questions
 ![Results 1](analysis/graphs/doublebar_question_labels.png)
 ![Results 2](analysis/graphs/doublebar_context_labels.png)
 
