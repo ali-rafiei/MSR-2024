@@ -42,7 +42,6 @@ The file structure of the artifact is as follow:
     * **SOrefine.py:** randomly samples from so.txt to have the same number of prompts as the DevGPT data, creates refined_so.json
     * **stackoverflow.com-Posts.7z:** zip file for all Stack Overflow data (~20GB)
 * **DevGPT:** folder with all of the DevGPT data that will be used for analysis
-* **DevGPT.zip:** zip file fore the DevGPT folder
 
 ## Python Programs and Analysis
 All files in terms of python programs and analysis scripts can be found in the "analysis" folder found in the same directory as the README.md. For all future instructions, make sure your terminal window is inside the "analysis" folder.
