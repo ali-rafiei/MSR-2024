@@ -12,9 +12,9 @@ Please download the additional files for this project from the following Google 
 
 ### Files
 * **stackoverflow.com-Posts.7z:** This is a mandatory file needed to extract the Stack Overflow data, place file within the `analysis` folder.
-* **so.txt:** This is an optional file that is the results of running `scrapeSO.py` (see instructions below), needed to run `SOrefine.py`, place file within the `analysis` folder
+* **so.txt:** This is a mandatory file that is the results of running `scrapeSO.py` (see instructions below), needed to run `SOrefine.py`, place file within the `analysis` folder
 * **filtered_out_data.json:** This is an optional file that is the results of running `refineDevGPT.py`, place file within the `analysis` folder
-* **filtered_data.json:** This is an optional file that is the results of running `refineDevGPT.py`, needed to run `refineDevGPTDate.py`, place file within the `analysis` folder
+* **filtered_data.json:** This is a mandatory file that is the results of running `refineDevGPT.py`, needed to run `refineDevGPTDate.py`, place file within the `analysis` folder
 
 ## Content
 The file structure of the artifact is as follow:
