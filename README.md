@@ -25,6 +25,7 @@ The file structure of the artifact is as follow:
     * **count_tokens.py:** check how many tokens will be needed to label all the data using gpt-3.5-turbo-1106
     * **filtered_data.json:** filtered data from refineDevGPT.py
     * **filtered_out_data.json:** filtered out data from refineDevGPT.py (repeating data and non-english data)
+    * **gout.txt:** just the print out of the dictionaries used in graphs.py, helpful for seeing the actual data
     * **graphs.py:** takes combined_data_final.json and creates double bar graphs and word clouds to represent collected labels
     * **label_data_errorgpt.py:** finds all labels created by label_data.py that don't use pre-existing labels and adds "ErrorGPT" to combined_data.json 
     * **label_data.py:** combines refined_devgpt.json and refined_so.json to generate labels using gpt-3.5-turbo-1106 to create combined_data.json
