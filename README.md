@@ -97,7 +97,7 @@ python3 FILE_NAME.py
     - Incorrect context label lines: 113, 266, 308, 401, 446, 599, 695, 797, 823, 863, 884, 953, 1013, 1093, 1115
       * 153/168 x 100 = 91.0714 % accurate
 
-11. Finally, run `graphs.py` to create double bar graphs comparing question and context labels between ChatGPT and Stack Overflow questions, and word clouds based on the keyword labels for ChatGPT and Stack Overflow.
+11. Finally, run `graphs.py > gout.txt` to create double bar graphs comparing question and context labels between ChatGPT and Stack Overflow questions, and word clouds based on the keyword labels for ChatGPT and Stack Overflow (and the exact numbers behind every keyword).
 
 ## Results
 ### Label Comparisons Between ChatGPT and Stack Overflow Questions

@@ -69,7 +69,18 @@ stackoverflow_question_label_counts = dict(sorted(stackoverflow_question_label_c
 stackoverflow_context_label_counts = dict(sorted(stackoverflow_context_label_counts.items(), key=lambda item: item[1], reverse=True))
 stackoverflow_keyword_label_counts = dict(sorted(stackoverflow_keyword_label_counts.items(), key=lambda item: item[1], reverse=True))
 
-# Dictionaries are defined as the following
+print("ChatGPT Question Labels:")
+print(chatgpt_question_label_counts)
+print("\nStack Overflow Question Labels:")
+print(stackoverflow_question_label_counts)
+print("\nChatGPT Context Labels:")
+print(chatgpt_context_label_counts)
+print("\nStack Overflow Context Labels:")
+print(stackoverflow_context_label_counts)
+print("\nChatGPT Keyword Labels:")
+print(chatgpt_keyword_label_counts)
+print("\nStack Overflow Keyword Labels:")
+print(stackoverflow_keyword_label_counts)# Dictionaries are defined as the following
 # chatgpt_question_label_counts = {'none of the above': 1422, 'Conceptual': 943, 'Review': 753, 'API Usage': 678, 'Discrepancy': 410, 'Errors': 312, 'Learning': 124, 'API Change': 73}
 # chatgpt_context_label_counts = {'Task/Goal': 1684, 'Request for Explanation': 1554, 'none of the above': 1531, 'Code Snippet': 1380, 'Error Message': 325, 'Input/Output': 238}
 # stackoverflow_question_label_counts = {'Discrepancy': 1716, 'Errors': 1064, 'Conceptual': 841, 'API Usage': 616, 'Review': 215, 'none of the above': 199, 'API Change': 77, 'Learning': 63}
