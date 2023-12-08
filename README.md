@@ -12,9 +12,9 @@ Please download the additional files for this project from the following Google 
 
 ### Files
 * **stackoverflow.com-Posts.7z:** This is a mandatory file needed to extract the Stack Overflow data, place file within the `analysis` folder.
-* **so.txt:** This is an optional file that is the results of running `scrapeSO.py` (see instructions below), place file within the `analysis` folder
+* **so.txt:** This is an optional file that is the results of running `scrapeSO.py` (see instructions below), needed to run `SOrefine.py`, place file within the `analysis` folder
 * **filtered_out_data.json:** This is an optional file that is the results of running `refineDevGPT.py`, place file within the `analysis` folder
-* **filtered_data.json:** This is an optional file that is the results of running `refineDevGPT.py`, place file within the `analysis` folder
+* **filtered_data.json:** This is an optional file that is the results of running `refineDevGPT.py`, needed to run `refineDevGPTDate.py`, place file within the `analysis` folder
 
 ## Content
 The file structure of the artifact is as follow:
@@ -37,8 +37,8 @@ The file structure of the artifact is as follow:
     * **refineDevGPT.py:** removes repeating and non-english data from all of the devgpt snapshots, creates filtered_data.json and filtered_out_data.json
     * **refineDevGPTDate.py:** removes non-aligned dates from filtered_data.json, creates refined_devgpt.json
     * **requirements.txt:** dependencies needed to run all python programs
-    * **scrapeSO.py:** helps parse all data needed from stackoverflow.com-Posts.7z, must use specific terminal command for proper use
-    * **so.txt:** parsed data from scrapeSO.py
+    * **scrapeSO.py:** helps mine all data needed from stackoverflow.com-Posts.7z, must use specific terminal command for proper use
+    * **so.txt:** mined data from scrapeSO.py
     * **SOrefine.py:** randomly samples from so.txt to have the same number of prompts as the DevGPT data, creates refined_so.json
     * **stackoverflow.com-Posts.7z:** zip file for all Stack Overflow data (~20GB)
 * **DevGPT:** folder with all of the DevGPT data that will be used for analysis
