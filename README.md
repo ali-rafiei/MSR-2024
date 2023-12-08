@@ -73,28 +73,31 @@ Then, follow these steps to complete the reproduction process:
 ```
 
 
-2. Run `refineDevGPT.py` to create `filtered_data.json` and `filtered_out_data.json`. This program will automatically obtain the DevGPT data from the folder itself.
+2. Run `refineDevGPT.py` to create `filtered_data.json` and `filtered_out_data.json`. This program will automatically obtain the DevGPT data from the folder itself. All future Python programs can be run in the following format:
+```
+python3 FILE_NAME.py
+```
 
-3. Once `so.txt` and `filtered_data.json` are obtained, run `refineDevGPTDate.py` and `SOrefine.py` in no particular order.
+4. Once `so.txt` and `filtered_data.json` are obtained, run `refineDevGPTDate.py` and `SOrefine.py` in no particular order.
 
-4. Once `refined_devgpt.json` and `refined_so.json` have been created, specify in line 7 of `man_analy.py` with “context_labels” to obtain the statistically significant sample size used to determine context labels via manual analysis (this is `man_analy1.json`).
+5. Once `refined_devgpt.json` and `refined_so.json` have been created, specify in line 7 of `man_analy.py` with “context_labels” to obtain the statistically significant sample size used to determine context labels via manual analysis (this is `man_analy1.json`).
 
-5. Run `count_tokens.py` to determine how many tokens it will take to run `label_data.py`, this program will also tell you the minimum amount of money (USD) to load into your openai account. Add 1-3 dollars over this number just in case.
+6. Run `count_tokens.py` to determine how many tokens it will take to run `label_data.py`, this program will also tell you the minimum amount of money (USD) to load into your openai account. Add 1-3 dollars over this number just in case.
 
-6. Make sure to create your openai API key and place it into line `19` of `label_data.py` before running it. The program will automatically save any progress in terms of labeling data should the program exit during runtime, in that case, un-comment lines `175-184` and comment the line sections `157-173` and then re-run the program. Labeling the data will take 10-15 hours to complete, resulting in `combined_data.json`. (Due to the probabalistic nature of using gpt-3.5-turbo-1106 to label questions, results may vary but final results will still be similar)
+7. Make sure to create your openai API key and place it into line `19` of `label_data.py` before running it. The program will automatically save any progress in terms of labeling data should the program exit during runtime, in that case, un-comment lines `175-184` and comment the line sections `157-173` and then re-run the program. Labeling the data will take 10-15 hours to complete, resulting in `combined_data.json`. (Due to the probabalistic nature of using gpt-3.5-turbo-1106 to label questions, results may vary but final results will still be similar)
 
-7. Once `combined_data.json` is obtained, run `label_data_errorgpt.py` to find all questions that were either not given labels or were given labels that were not from the pre-defined list of labels. This program will only add “ErrorGPT”: “something went wrong” to `combined_data.json`.
+8. Once `combined_data.json` is obtained, run `label_data_errorgpt.py` to find all questions that were either not given labels or were given labels that were not from the pre-defined list of labels. This program will only add “ErrorGPT”: “something went wrong” to `combined_data.json`.
 
-8. A manual labeling process of `combined_data.json` will be done to complete some of the questions that the GPT labeling program wasn’t able to do. In my case, 126 questions needed to be manually labeled out of a total of 9376 questions.
+9. A manual labeling process of `combined_data.json` will be done to complete some of the questions that the GPT labeling program wasn’t able to do. In my case, 126 questions needed to be manually labeled out of a total of 9376 questions.
 
-9. After the manual labeling which is now stored in `combined_data_final.json`, run `man_analy.py` again but change line 7 to “gpt_labels” to get `man_analy2.json` which is the statistically significant random sample in determining the accuracy of the final collection of labels. My results were the following:
+10. After the manual labeling which is now stored in `combined_data_final.json`, run `man_analy.py` again but change line 7 to “gpt_labels” to get `man_analy2.json` which is the statistically significant random sample in determining the accuracy of the final collection of labels. My results were the following:
 
     - Incorrect question label lines: 112, 424, 835, 862, 916, 1174, 1192, 1200
       * 88/96 x 100 = 91.6667 % accurate
     - Incorrect context label lines: 113, 266, 308, 401, 446, 599, 695, 797, 823, 863, 884, 953, 1013, 1093, 1115
       * 153/168 x 100 = 91.0714 % accurate
 
-10. Finally, run `graphs.py` to create double bar graphs comparing question and context labels between ChatGPT and Stack Overflow questions, and word clouds based on the keyword labels for ChatGPT and Stack Overflow.
+11. Finally, run `graphs.py` to create double bar graphs comparing question and context labels between ChatGPT and Stack Overflow questions, and word clouds based on the keyword labels for ChatGPT and Stack Overflow.
 
 ## Results
 ### Label Comparisons Between ChatGPT and Stack Overflow Questions
